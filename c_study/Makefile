@@ -2,7 +2,7 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -std=c11
 
-SRC = problem7-3-3.c
+SRC = problem_5-1-5.c
 
 TARGET = $(basename $(word 1, $(SRC)))
 
@@ -18,6 +18,7 @@ $(TARGET): $(OBJ)
 
 test: $(TARGET)
 	./$(TARGET)
+	$(MAKE) clean
 
 clean:
 	rm -f $(TARGET) $(OBJ)
