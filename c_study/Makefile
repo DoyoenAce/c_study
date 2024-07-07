@@ -1,24 +1,27 @@
 CC = gcc
-
 CFLAGS = -Wall -Wextra -std=c11
-
-SRC = problem_5-1-5.c
-
-TARGET = $(basename $(word 1, $(SRC)))
-
-OBJ = $(SRC:.c=.o)
 
 all: $(TARGET)
 
-%.o: %c
+%.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-$(TARGET): $(OBJ)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJ)
+%: %.o
+	$(CC) $(CFLAGS) -o $@ $^
 
-test: $(TARGET)
-	./$(TARGET)
-	$(MAKE) clean
+test: 
+	@if [ "$(FILE)" = "" ]; then \
+		echo "Usage: make test FILE=filename.c"; \
+	else \
+		$(CC) $(CFLAGS) -o $(basename $(FILE)) $(FILE) && ./$(basename $(FILE)) && $(MAKE) clean FILE=$(FILE); \
+	fi
 
 clean:
-	rm -f $(TARGET) $(OBJ)
+	@if [ -z "$(FILE)" ]; then \
+		rm -f *.o; \
+	else \
+		rm -f $(basename $(FILE)) $(basename $(FILE)).o; \
+	fi
+
+%:
+	@:
