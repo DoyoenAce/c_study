@@ -1,5 +1,5 @@
 #include<stdio.h>
-int total=0;
+
 
 int AddToTotal(int num)
 {
