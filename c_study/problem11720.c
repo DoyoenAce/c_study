@@ -1,17 +1,16 @@
-#include<stdio.h>
-int main(void)
-{
-    int input;
-    int sum;
-    char arr[100] = " ";
+#include <stdio.h>
 
-    scanf("%d", &input);
-    scanf("%s", arr);
-
-    for(int i = 0; i<input; i++)
-    {
-        sum += arr[i]-'0';
-    }
+int main(void) {
+    
+    int n, sum=0;
+    
+    scanf("%d", &n);
+    
+    char num[n];
+    
+    scanf("%s", num);
+    
+    for(int i=0; i<n; i++) sum += num[i] - '0';
+    
     printf("%d", sum);
-    return 0;
 }
