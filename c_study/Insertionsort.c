@@ -1,37 +1,42 @@
 #include<stdio.h>
-int main(void)
-{
-    int arr[4];
-    int i;
-    for(i=0; i<4; i++)
-    {
-        printf("입력 %d:", i);
-        scanf("%d", &arr[i]);
-    }
-    insertionsort(arr,sizeof(arr)/sizeof(int));
-    for(i = 0; i<4; i++)
-    {
-        printf("%d", arr[i]);
+
+void printArr(int *arr, int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
     }
     printf("\n");
-    return 0;
 }
-void insertionsort(int arr[], int len)
+
+int main(void)
 {
+    int N;
+    scanf("%d", &N);
     int i,j,temp;
-    for(i = 0; i<len; i++)
+    int* arr;
+    arr = malloc(sizeof(int)*N);
+    for(i = 0; i < N; i++)
     {
-        int min =i;
-        for(j =i; j<len; j++)
+        scanf("%d", &arr[i]);
+    }
+    
+    for(i = 1; i<N; i++)
+    {
+        for(j = i; j > 0; j--)
         {
-            if(arr[min]>arr[j])
+            if(arr[j-1] >= arr[j])
             {
-                min =j;
+                temp = arr[j-1];
+                arr[j-1] = arr[j];
+                arr[j] = temp;
+            }
+            else
+            {
+                break;
             }
         }
-        temp = arr[min];
-        arr[min] = arr[i];
-        arr[i] = temp;
-
     }
+
+    printArr(arr, N);
+
+    return 0;
 }
