@@ -1,15 +1,16 @@
-n = int(input())
+n = int(input()) #입력할 변수를 선언
 a = []
-temp = 0
-for i in range(n):
-    a.append(int(input()))
-for i in range(n):
-    for j in range(n-i-1):
-        if(a[j]>a[j+1]):
-            temp = a[j+1]
+for i in range(n): #첫번째 입력한 수만큼 반복하기
+    a.append(int(input())) #줄 하나씩 늘리기(첫번쨰 입력한 수만큼)
+for i in range(n): #첫번째 입력한 수만큼 반복하기
+    for j in range(n-i-1): #n-i-1만큼 반복하기기
+        if(a[j]>a[j+1]): #만약 a의 j번쨰 수가 j+1번쨰 숫자보다 크다면
+            temp = a[j+1] #a의 j번째 수와 a의 j+1번쨰 수의 자리를 바꾸기기
             a[j+1] = a[j]
             a[j] = temp
-print(a)    
+for k in range(1,n+1):
+    print(a[k-1])
+
 
     
 
