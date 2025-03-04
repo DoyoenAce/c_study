@@ -6,6 +6,7 @@ int main(void)
     int a;
     for(a=0; a<5; a++)
     {
+        int temp;
         *ptr += 2;
         printf("%d\n", arr[a]);
     }

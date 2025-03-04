@@ -1,0 +1,10 @@
+void  ShowData(const  int *  ptr) 
+{
+int *  rptr=ptr; 
+printf("%d \n",  *rptr); 
+*rptr=20;
+}
+여기서 매개변수 ptr에 const 선언이 추가되어있음. 이는 함수 ShowData 내에서 ptr을 통해 ptr이 가리키 
+는 변수에 저장된 값을 변경시키지 않겠다는 의도가 포함된 선언. 그런데 다음 행에서 다음과 같이 
+ptr에 저장된 값을 const로 선언되지 않은 포인터 변수에 대입하고 있음음.
+int *  rptr=ptr; //경고 발생.

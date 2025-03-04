@@ -14,14 +14,14 @@ int square(int n)
 {
     if(n <= 0)
     {
-        return 1; 
+        return 1;
     }
     else
     {
         return 2*square(n-1);
     }
-}
 
+}
 int main(void)
 {
     int n;
@@ -29,3 +29,4 @@ int main(void)
     int r = square(n);
     printf("%d\n", r);
 }
+

@@ -21,7 +21,7 @@ int main(void)
     
     for(i = 1; i<N; i++)
     {
-        for(j = i; j > 0; j--)
+        for(j = i; j > 0; j--)        
         {
             if(arr[j-1] >= arr[j])
             {
