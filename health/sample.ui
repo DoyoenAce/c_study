@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HealthSurveyApp</class>
+ <widget class="QMainWindow" name="HealthSurveyApp">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>320</height>
+   </rect>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="lblQuestionNumber">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>문제 1 / 13</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblQuestionText">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>460</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>질문 텍스트가 들어갑니다.</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioOption1">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>120</y>
+      <width>420</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>옵션 1</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioOption2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>160</y>
+      <width>420</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>옵션 2</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioOption3">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>200</y>
+      <width>420</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>옵션 3</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioOption4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>240</y>
+      <width>420</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>옵션 4</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnPrev">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>280</y>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>이전 문제</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnNext">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>280</y>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>다음 문제</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
